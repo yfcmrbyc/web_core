@@ -1,0 +1,25 @@
+.menu-footer {
+
+    &__button-block {
+        display: flex;
+        max-width: 152px;
+        justify-content: space-between;
+    }
+
+    &__email {
+        margin-bottom: 0.5rem;
+        @include button-text;
+    }
+
+    &__phone {
+        font-family: $font-family--b;
+        font-size: $font-size--modal;
+        line-height: $line-height-modal;
+        color: $text-color;
+        margin-bottom: 2.5rem;
+    }
+
+    &__lang-navigation {
+        margin-bottom: 2rem;
+    }
+}

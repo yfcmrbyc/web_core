@@ -1,0 +1,36 @@
+.lang-navigation {
+
+    &__container {
+        display: flex;
+        max-width: 90px;
+        justify-content: space-between;
+    }
+
+    &__link {
+        @include button-text;
+        transition: 150ms;
+
+        &.active {
+            color: $text-header-color;
+        }
+
+        &:hover {
+            color: $input-color;
+        }
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+        }
+
+        &:link {
+            color: $active-link-color;
+        }
+    }
+}

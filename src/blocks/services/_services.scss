@@ -1,0 +1,54 @@
+.services {
+    &--position {
+        padding: 0 1rem 1.5rem 1rem;
+
+        @media (min-width: $screen--m) {
+            padding: 0 1.5rem 2rem 1.5rem;
+        }
+        @media (min-width: $screen--l) {
+            padding: 2.63rem 2rem;
+        }
+    }
+
+    &__container {
+
+        @media (min-width: $screen--m) {
+            display: flex;
+        }
+    }
+
+    &__article {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__image {
+        background-image: url(../blocks/services/img/bg_mob.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0;
+
+        @media (min-width: $screen--l) {
+            background-image: url(../blocks/services/img/bg_desktop.jpg);
+        }
+
+        &--position {
+            min-width: 320px;
+            min-height: 176px;
+            margin: 0 auto;
+            border-radius: 5px;
+
+            @media (min-width: $screen--m) {
+                margin: 1.5em 2.5em 0 3em;
+            }
+
+            @media (min-width: $screen--l)  {
+                min-width: 532px;
+                min-height: 384px;
+                margin-top: 0;
+            }
+        }
+    }
+
+
+}

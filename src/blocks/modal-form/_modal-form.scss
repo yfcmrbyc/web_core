@@ -1,0 +1,110 @@
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 288px;
+
+    @media (min-width: $screen--m) {
+        max-width: 376px;
+    }
+    
+
+    &__input {
+        width: auto;
+        height: 48px;
+        border: 1px solid $border-button-color;
+        background-color: $bg-elem-color;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+
+        @include button-text;
+        color: $input-color;
+
+        padding-left: 1rem;
+
+        transition: 500ms;
+
+        &:active {
+            border: 3px solid $active-link-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $modal-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 8px;
+        }
+    }
+
+    &__message {
+        width: auto;
+        height: 118px;
+        border: 1px solid $border-button-color;
+        background-color: $bg-elem-color;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+
+        @include button-text;
+        color: $input-color;
+
+        padding-left: 1rem;
+        padding-top: 12px;
+        transition: 500ms;
+
+        &:active {
+            border: 3px solid $active-link-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $modal-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 8px;
+        }
+
+    }
+
+    &__text {
+        font-family: $font-family--m;
+        font-size: $font-size--small;
+        line-height: $line-height--small;
+        color: $text-header-color;
+        margin-bottom: 1.5rem;
+    }
+
+    &__link {
+        color: $modal-color;
+        transition: 500ms;
+
+        &:active {
+            color: $active-link-color;
+        }
+
+        &:hover {
+            color: $text-header-color;
+        }
+
+        &:focus {
+            outline: none;
+            border-radius: 5px;
+            background-color: $block-border-color;
+        }
+
+        &:link {
+            color: $text-color;
+        }
+    }
+
+    &__submit {
+        @include pink-button;
+        width: 136px;
+        align-self: end;
+    }
+
+}

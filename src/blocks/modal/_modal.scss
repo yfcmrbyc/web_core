@@ -1,0 +1,49 @@
+.modal {
+
+    display: none;
+
+
+    &__sidebar {
+        max-width: 320px;
+        min-height: 680px;
+        border-color: $bg-elem-color;
+
+        @media (min-width: $screen--m) {
+            min-height: 1024px;
+        }
+
+        @media (min-width: $screen--xl) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+    }
+
+    &__feedback {
+        max-width: 320px;
+        min-height: 680px;
+        border-color: $bg-elem-color;
+        position: relative;
+        right: -100px;
+
+        @media (min-width: $screen--m) {
+            max-width: 440px;
+            min-height: 100vh;
+        }
+    }
+
+    &__call {
+        max-width: 320px;
+        min-height: 680px;
+        border-color: $bg-elem-color;
+        position: relative;
+        right: -100px;
+
+        @media (min-width: $screen--m) {
+            max-width: 440px;
+            min-height: 100vh;
+        }
+    }
+}

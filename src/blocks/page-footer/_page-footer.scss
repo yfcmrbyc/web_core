@@ -1,0 +1,48 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 19px;
+
+    @media (min-width: $screen--m) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @media (min-width: $screen--l) {
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__text {
+        display: inline-block;
+        margin-top: 1rem;
+        text-align: center;
+        @include card-title;
+
+        @media (min-width: $screen--m) {
+            margin-top: 2rem;
+        }
+
+        &:first-of-type {
+            @media (min-width: $screen--m) {
+                width: 218px;
+                text-align: start;
+            }
+
+        }
+        &:last-of-type {
+            @media (min-width: $screen--m) {
+                width: 218px;
+                text-align: end;
+            }
+
+            @media (min-width: $screen--l) {
+                width: 330px;
+            }
+            
+        }
+
+    }
+}

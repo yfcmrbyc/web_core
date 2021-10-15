@@ -1,0 +1,37 @@
+.change {
+
+    &__button {
+        @include continue-button;
+        @include button-text;
+        cursor: pointer;
+        transition: 500ms;
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $block-border-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &--hide {
+            width: 6em;
+            background-image: url(../blocks/change/img/expand.svg);
+        }
+    }
+
+    &__hide {
+        display: none;
+    }
+}

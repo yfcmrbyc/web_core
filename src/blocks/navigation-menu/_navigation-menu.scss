@@ -1,0 +1,53 @@
+.navigation-menu {
+
+    &__container {
+        min-height: 416px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__link {
+        display: block;
+        @include button-text;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -1.5rem;
+            width: 4px;
+            height: 32px;
+            background: $highlight-color;
+            border-radius: 2px;
+            filter: opacity(0);
+            transition: 800ms;
+        }
+
+        &:hover {
+            color: $text-header-color;
+
+            &.navigation-menu__link::before {
+                filter: opacity(1);
+            }
+        }
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+        }
+
+        &:link {
+            color: $input-color;
+        }
+
+    }
+    
+}

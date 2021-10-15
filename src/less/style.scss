@@ -1,0 +1,33 @@
+@import './fonts';
+@import './variables';
+@import './nullstyle';
+@import './mixins/mixins';
+
+@import '../blocks/main-container/main-container';
+@import '../blocks/header/header';
+@import '../blocks/nav-button/nav-button';
+@import '../blocks/services/services';
+@import '../blocks/heading-container/heading-container';
+@import '../blocks/menu-container/menu-container';
+@import '../blocks/article/article';
+@import '../blocks/change/change';
+@import '../blocks/brands/brands';
+@import '../blocks/devices/devices';
+@import '../blocks/prices/prices';
+@import '../blocks/price-card/price-card';
+@import '../blocks/price-table/price-table';
+@import '../blocks/page-footer/page-footer';
+@import '../blocks/modal/modal';
+@import '../blocks/sidebar/sidebar';
+@import '../blocks/navigation-menu/navigation-menu';
+@import '../blocks/menu-header/menu-header';
+@import '../blocks/menu-footer/menu-footer';
+@import '../blocks/lang-navigation/lang-navigation';
+@import '../blocks/modal-feedback/modal-feedback';
+@import '../blocks/modal-call/modal-call';
+@import '../blocks/modal-form/modal-form';
+
+@import '../blocks/swiper/swiper';
+//@import '';
+//@import '';
+//@import '';

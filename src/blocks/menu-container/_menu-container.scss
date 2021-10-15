@@ -1,0 +1,54 @@
+.menu-container {
+    display: flex;
+    min-height: 2.8em;
+    text-align: center;
+    overflow: scroll;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen--l) {
+        flex-wrap: wrap;
+        overflow: auto;
+        margin-bottom: 0;
+    }
+
+    &__button {
+        flex-shrink: 0;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 10px 20px;
+        @include button-text;
+        color: $text-header-color;
+        transition: 150ms;
+
+        &.active{
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:hover {
+            border: 1px solid $input-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:link {
+            color: $text-color;
+        }
+    }
+}

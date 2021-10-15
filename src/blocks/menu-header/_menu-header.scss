@@ -1,0 +1,11 @@
+.menu-header {
+    &__button {
+        &:first-of-type {
+            margin-right: 1rem;
+            
+            @media (min-width: $screen--xl) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.price-card {
+    padding: 1rem;
+
+    &__title {
+        @include card-title;
+    }
+
+    &__text {
+        @include card-text;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        @include pink-button;
+        width: 119px;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}

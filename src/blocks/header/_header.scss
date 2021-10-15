@@ -1,0 +1,51 @@
+.header {
+    border-bottom: 1px solid $block-border-color;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: $screen--l) {
+        display: none;
+    }
+    
+    &__container {
+        height: 100%;
+        background-color: $bg-elem-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5em 0;
+    }
+
+    &__l-block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+
+        @media (min-width: $screen--m) {
+            min-width: 230px;
+            flex-grow: 0;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__r-block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+
+        @media (min-width: $screen--m) {
+            justify-content: space-evenly;
+            min-width: 340px;
+            flex-grow: 0;
+        }
+    }
+
+    &__hidden {
+        display: none;
+
+        @media (min-width: $screen--m) {
+            display: block;
+        }
+    }
+}

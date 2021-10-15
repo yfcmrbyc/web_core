@@ -1,0 +1,116 @@
+.devices {
+    min-width: 320px;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: $screen--m) {
+        padding-left: 1.5em;
+    }
+
+    @media (min-width: $screen--l) {
+        padding-left: 2em;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__swiper {
+        min-height: 190px;
+        position: relative;
+
+        @media (min-width: $screen--m) {
+            margin-right: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        @media (min-width: $screen--l) {
+            margin-right: 2em;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -1px;
+            width: 24px;
+            height: 162px;
+            background: linear-gradient(270deg, $bg-color 16.84%, transparent 100%);
+            z-index: 2;
+
+            @media (min-width: $screen--m) {
+                display: none;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding: 5px 0;
+
+        @media (min-width: $screen--m) {
+            display: grid;
+            row-gap: 1em;
+            column-gap: 1.5em;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            justify-items: center;
+        }
+        
+        @media (min-width: $screen--l) {
+            column-gap: 2em;
+            grid-template-columns: repeat(auto-fill, minmax(241px, 1fr));
+        }
+    }
+
+    &__button {
+        display: block;
+        min-width: 240px;
+        min-height: 160px;
+        border: 1px solid $border-button-color;
+        border-radius: 6px;
+        background-color: $bg-elem-color;
+        background-image: url(../blocks/devices/img/go.svg);
+        background-position: right 1rem bottom 1rem;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        position: relative;
+        transition: 500ms;
+
+
+        &:active {
+            border: 3px solid $active-link-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $block-border-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 6px;
+        }
+
+        @media (min-width: $screen--m) {
+            min-width: 224px;
+        }
+        @media (min-width: $screen--l){
+            min-width: 240px;
+        }
+
+    }
+
+    &__text {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        @include button-text;
+    }
+
+    &__change {
+        display: none;
+
+        @media (min-width: $screen--m) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin button-text {
+    font-family: $font-family--m;
+    font-size: $font-size;
+    line-height: $line-height--h;
+    letter-spacing: $letter-spasing--h2;
+    color: $text-color;
+}

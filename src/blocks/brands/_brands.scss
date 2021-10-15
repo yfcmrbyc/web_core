@@ -1,0 +1,151 @@
+.brands {
+    min-width: 320px;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: $screen--m) {
+        padding-left: 1.5em;
+    }
+
+    @media (min-width: $screen--l) {
+        padding-left: 2em;
+    }
+
+    &__title {
+        @include section-title;
+    }
+
+    &__swiper {
+        min-height: 120px;
+        position: relative;
+
+        @media (min-width: $screen--m) {
+            margin-right: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        @media (min-width: $screen--l) {
+            margin-right: 2em;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -1px;
+            width: 24px;
+            height: 80px;
+            background: linear-gradient(270deg, $bg-color 16.84%, transparent 100%);
+            z-index: 2;
+
+            @media (min-width: $screen--m) {
+                display: none;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding: 5px 0;
+
+        @media (min-width: $screen--m) {
+            display: grid;
+            row-gap: 1em;
+            column-gap: 1.5em;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            justify-items: center;
+        }
+        
+        @media (min-width: $screen--l) {
+            column-gap: 2em;
+            grid-template-columns: repeat(auto-fill, minmax(241px, 1fr));
+        }
+    }
+
+    &__button {
+        display: block;
+        min-width: 240px;
+        min-height: 72px;
+        border: 1px solid $border-button-color;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 500ms;
+
+        &:active {
+            border: 3px solid $active-link-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $block-border-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+        }
+
+        @media (min-width: $screen--m) {
+            min-width: 224px;
+        }
+        @media (min-width: $screen--l){
+            min-width: 240px;
+        }
+
+        &--lenovo {
+            background: 
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                url(../blocks/brands/img/lenovo.svg) no-repeat left 1rem center,
+                $bg-elem-color;
+        }
+        &--samsung {
+            background: 
+                url(../blocks/brands/img/samsung.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--apple {
+            background: 
+                url(../blocks/brands/img/apple.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--bosch {
+            background: 
+                url(../blocks/brands/img/bosch.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--hp {
+            background: 
+                url(../blocks/brands/img/hp.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--acer {
+            background: 
+                url(../blocks/brands/img/acer.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--viewsonic {
+            background: 
+                url(../blocks/brands/img/viewsonic.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+        &--sony {
+            background: 
+                url(../blocks/brands/img/sony.svg) no-repeat left 1rem center,
+                url(../blocks/brands/img/go.svg) no-repeat right 1rem center,
+                $bg-elem-color;
+        }
+
+    }
+
+    &__change {
+        display: none;
+
+        @media (min-width: $screen--m) {
+            display: block;
+        }
+    }
+}

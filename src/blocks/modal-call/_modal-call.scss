@@ -1,0 +1,59 @@
+.modal-call {
+    min-width: 320px;
+    background-color: $bg-elem-color;
+    box-shadow:
+        2px 0px 4px rgba(69, 79, 126, 0.02),
+        -16px 0px 52px rgba(14, 24, 80, 0.2);
+
+    @media (min-width: $screen--m) {
+        min-width: 360px;
+    }
+
+    &__container {
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 680px;
+        position: relative;
+        
+        @media (min-width: $screen--m) {
+            min-height: 100vh;
+            padding: 2.5rem 2rem;
+        }
+    }
+
+    &__button {
+        margin-bottom: 2.5rem;
+
+        @media (min-width: $screen--m) {
+            position: absolute;
+            top: 2rem;
+            left: -4rem;
+        }
+    }
+
+    &__header {
+        font-family: $font-family--b;
+        font-size: $font-size--modal;
+        line-height: $line-height-modal;
+        letter-spacing: $letter-spasing--h1;
+        color: $text-color;
+        position: relative;
+        margin-bottom: 1.5rem;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1rem;
+            top: -6px;
+            width: 3px;
+            height: 40px;
+            background: $highlight-color;
+            border-radius: 3px;
+
+            @media (min-width: $screen--m) {
+                left: -2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+
+.swiper-slide {
+    height: auto;
+    width: auto;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #dddddd;
+    opacity:  1;
+}
+
+.swiper-pagination-bullet-active {
+   background-color: $input-color;
+}
+
+
+.swiper-pagination {
+    @media (min-width: $screen--m) {
+        display: none;
+    }
+}

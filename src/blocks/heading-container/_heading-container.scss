@@ -1,0 +1,77 @@
+.heading-container {
+
+    @media (min-width: $screen--l) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__heading {
+        font-family: $font-family--b;
+        font-size: $font-size--h1;
+        line-height: $line-height--h;
+        letter-spacing: $letter-spasing--h1;
+        color: $text-color;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1rem;
+            width: 3px;
+            height: 40px;
+            background: $highlight-color;
+            border-radius: 3px;
+
+            @media (min-width: $screen--m) {
+                left: -1.5rem;
+            }
+            @media (min-width: $screen--l) {
+                left: -2rem;
+            }
+        }
+    }
+
+    &__button-block {
+        display: none;
+
+        @media (min-width: $screen--l) {
+            display: flex;
+        }
+    }
+
+    &__button {
+        min-width: 175px;
+        padding: 0.5em;
+        margin-right: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 150ms;
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $block-border-color;
+            background-color: $bg-elem-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+    }
+
+    &__button-text {
+        display: block;
+        @include button-text;
+    }
+}

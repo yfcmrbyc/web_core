@@ -1,0 +1,61 @@
+.article {
+
+    &__preview {
+        display: block;
+        @include text;
+
+        @media (min-width: $screen--m) {
+            line-height: $line-height;
+            margin-top: 1rem;
+        }
+
+        @media (min-width: $screen--l) {
+            margin-top: 2rem;
+        }
+
+        &--hidden {
+            display: none;
+
+            @media (min-width: $screen--m) {
+                display: inline-block;
+                margin-top: 1rem;
+            }
+        }
+
+        &--hidden-screen-l {
+            display: none;
+
+            @media (min-width: $screen--l) {
+                display: inline;
+            }
+        }
+    }
+
+    &__continue-button {
+        margin-bottom: 1rem;
+        @include continue-button;
+        @include button-text;
+        width: 9em;
+
+        transition: 500ms;
+
+        &:active {
+            border: 1px solid $active-link-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px 5px $block-border-color;
+            background-color: $bg-elem-color;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $modal-color;
+            border-radius: 5px;
+            background-color: $bg-elem-color;
+        }
+
+    }
+}
