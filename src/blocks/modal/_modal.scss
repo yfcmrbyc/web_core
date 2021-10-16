@@ -29,10 +29,12 @@
 
         @media (min-width: $screen--l) {
             bottom: 0;
-            opacity: 1;
-            visibility: visible;
             transform: translateX(0px);
             z-index: 7;
+        }
+
+        &.modal__open{
+            transform: translateX(0px);
         }
     }
 
@@ -75,10 +77,6 @@
     &__open {
         visibility: visible;
         opacity: 1;
-
-        .modal__sidebar {
-            transform: translateX(0px);
-        }
 
         .modal__feedback {
             transform: translateX(0px);
