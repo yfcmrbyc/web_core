@@ -30,7 +30,7 @@
         @media (min-width: $screen--l) {
             bottom: 0;
             transform: translateX(0px);
-            z-index: 7;
+            z-index: 3;
         }
 
         &.modal__open{
