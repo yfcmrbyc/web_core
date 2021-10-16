@@ -10,21 +10,29 @@ openSidebar.addEventListener('click', function () {
     modalOpen(curentModal);
 });
 
-const openCall = document.querySelector('.open-call');
+const buttonsOpenCall = document.querySelectorAll('.open-call');
+if (buttonsOpenCall.length > 0) {
+    for (let i = 0; i < buttonsOpenCall.length; i++) {
+        const openCall = buttonsOpenCall[i];
+        openCall.addEventListener('click', function () {
+            const modalName = openCall.getAttribute('name');
+            const curentModal = document.getElementById(modalName);
+            modalOpen(curentModal);
+        });
+    }
+}
 
-openCall.addEventListener('click', function () {
-    const modalName = openCall.getAttribute('name');
-    const curentModal = document.getElementById(modalName);
-    modalOpen(curentModal);
-});
-
-const openFeedback = document.querySelector('.open-feedback');
-
-openFeedback.addEventListener('click', function () {
-    const modalName = openFeedback.getAttribute('name');
-    const curentModal = document.getElementById(modalName);
-    modalOpen(curentModal);
-});
+const buttonsOpenFeedback = document.querySelectorAll('.open-feedback');
+if (buttonsOpenFeedback.length > 0) {
+    for (let i = 0; i < buttonsOpenFeedback.length; i++) {
+        const openFeedback = buttonsOpenFeedback[i];
+        openFeedback.addEventListener('click', function () {
+            const modalName = openFeedback.getAttribute('name');
+            const curentModal = document.getElementById(modalName);
+            modalOpen(curentModal);
+        });
+    }
+}
 
 let unlock = true;
 
