@@ -17,10 +17,10 @@
 
         position: absolute;
         top: 0;
-        left: 0;
+        left: -400px;
 
 
-        transform: translateX(-400px);
+        transform: translateX(0px);
         transition: 800ms ease-in;
 
 
@@ -30,12 +30,12 @@
 
         @media (min-width: $screen--l) {
             bottom: 0;
-            transform: translateX(0px);
+            left: 0;
             z-index: 3;
         }
 
         &.modal__open{
-            transform: translateX(0px);
+            transform: translateX(400px);
         }
     }
 
@@ -45,10 +45,10 @@
         border-color: $bg-elem-color;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -600px;
         bottom: 0;
 
-        transform: translateX(600px);
+        transform: translateX(0px);
         transition: 800ms ease-in;
 
         @media (min-width: $screen--m) {
@@ -63,10 +63,10 @@
         border-color: $bg-elem-color;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -600px;
         bottom: 0;
 
-        transform: translateX(600px);
+        transform: translateX(0px);
         transition: 800ms ease-in;
 
         @media (min-width: $screen--m) {
@@ -80,11 +80,11 @@
         opacity: 1;
 
         .modal__feedback {
-            transform: translateX(0px);
+            transform: translateX(-600px);
         }
 
         .modal__call {
-            transform: translateX(0px);
+            transform: translateX(-600px);
         }
     }
 }
