@@ -88,13 +88,3 @@
     }
 }
 
-#open-sidebar {
-    @media (min-width: $screen--l) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 1;
-        visibility: visible;
-    }
-}
