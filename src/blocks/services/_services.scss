@@ -28,7 +28,7 @@
         background-position: center;
         padding: 0;
 
-        @media (min-width: $screen--l) {
+        @media (min-width: $screen--xl) {
             background-image: url(../blocks/services/img/bg_desktop.jpg);
         }
 
@@ -42,10 +42,13 @@
                 margin: 1.5em 2.5em 0 3em;
             }
 
-            @media (min-width: $screen--l)  {
+            @media (min-width: $screen--l) {
+                margin-top: 0;
+            }
+
+            @media (min-width: $screen--xl)  {
                 min-width: 532px;
                 min-height: 384px;
-                margin-top: 0;
             }
         }
     }

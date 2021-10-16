@@ -1,23 +1,38 @@
 .modal {
-
-    display: none;
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    opacity: 0;
+    visibility: hidden;
+    transition: 800ms ease-in;
 
     &__sidebar {
         max-width: 320px;
         min-height: 680px;
         border-color: $bg-elem-color;
 
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        transform: translateX(-400px);
+        transition: 800ms ease-in;
+
+
         @media (min-width: $screen--m) {
-            min-height: 1024px;
+            min-height: 100vh;
         }
 
-        @media (min-width: $screen--xl) {
-            position: absolute;
-            top: 0;
-            left: 0;
+        @media (min-width: $screen--l) {
             bottom: 0;
-            z-index: 5;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px);
+            z-index: 7;
         }
     }
 
@@ -25,8 +40,13 @@
         max-width: 320px;
         min-height: 680px;
         border-color: $bg-elem-color;
-        position: relative;
-        right: -100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        transform: translateX(600px);
+        transition: 800ms ease-in;
 
         @media (min-width: $screen--m) {
             max-width: 440px;
@@ -38,12 +58,45 @@
         max-width: 320px;
         min-height: 680px;
         border-color: $bg-elem-color;
-        position: relative;
-        right: -100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        transform: translateX(600px);
+        transition: 800ms ease-in;
 
         @media (min-width: $screen--m) {
             max-width: 440px;
             min-height: 100vh;
         }
+    }
+
+    &__open {
+        visibility: visible;
+        opacity: 1;
+
+        .modal__sidebar {
+            transform: translateX(0px);
+        }
+
+        .modal__feedback {
+            transform: translateX(0px);
+        }
+
+        .modal__call {
+            transform: translateX(0px);
+        }
+    }
+}
+
+#open-sidebar {
+    @media (min-width: $screen--l) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+        visibility: visible;
     }
 }

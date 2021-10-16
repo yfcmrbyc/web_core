@@ -1,10 +1,12 @@
+import Swiper from 'swiper/bundle';
+
 const buttonShowBrands = document.querySelector('.brands__button--show');
 const buttonHideBrands = document.querySelector('.brands__button--hide');
 const cardContainerBrands = document.querySelector('.brands__wrapper');
 const brandCard = cardContainerBrands.querySelectorAll('.brand-card');
 
 const breakpointSwiperBrands = window.matchMedia( '(min-width:768px)' );
-const breakpointDesktopBrands = window.matchMedia( '(min-width:1120px)' );
+const breakpointDesktopBrands = window.matchMedia( '(min-width:1444px)' );
 
 
 
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     const enableSwiper = function() {
   
-      brandsSwiper = new Swiper (".brands__", {
+      brandsSwiper = new Swiper (".brands__swiper", {
         slidesPerView: "auto",
         spaceBetween: 16,
         slideClass: 'brand-card',

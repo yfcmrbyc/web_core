@@ -1,0 +1,43 @@
+{
+  "name": "web_core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yfcmrbyc/web_core.git"
+  },
+  "author": "Anastasia Lebedeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yfcmrbyc/web_core/issues"
+  },
+  "homepage": "https://github.com/yfcmrbyc/web_core#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "autoprefixer": "^10.3.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "D": "^1.0.0",
+    "normalize": "^0.3.1",
+    "swiper": "^7.0.8"
+  }
+}

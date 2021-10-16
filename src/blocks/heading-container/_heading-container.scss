@@ -68,6 +68,26 @@
             border-radius: 5px;
             background-color: $bg-elem-color;
         }
+
+        &--repair {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $modal-color;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../blocks/heading-container/img/h-repair.svg);
+        }
+
+        &--checkstatus {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $modal-color;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../blocks/heading-container/img/h-checkstatus.svg);
+        }
     }
 
     &__button-text {

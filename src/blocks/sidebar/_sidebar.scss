@@ -5,7 +5,7 @@
         -2px 0px 4px rgba(69, 79, 126, 0.02),
         16px 0px 52px rgba(14, 24, 80, 0.2);
 
-    @media (min-width: $screen--xl) {
+    @media (min-width: $screen--l) {
         box-shadow: none;
     }
 
@@ -16,6 +16,10 @@
         min-height: 680px;
         
         @media (min-width: $screen--m) {
+            min-height: 100vh;
+        }
+
+        @media (min-width: $screen--l) {
             min-height: 1024px;
         }
     }

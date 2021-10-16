@@ -6,8 +6,11 @@
     }
 
     &__text {
+        display: block;
         @include card-text;
         margin-bottom: 1rem;
+        text-align: left;
+        max-width: 200px;
     }
 
     &__button {

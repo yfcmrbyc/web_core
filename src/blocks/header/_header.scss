@@ -15,6 +15,14 @@
         padding: 1.5em 0;
     }
 
+    &__logo {
+        width: 97px;
+        height: 52px;
+        background-image: url(../assets/img/logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     &__l-block {
         display: flex;
         justify-content: space-around;

@@ -1,8 +1,12 @@
 body {
     margin: 0;
 
-    @media (min-width: $screen--xl) {
+    @media (min-width: $screen--l) {
         padding-left: 320px;
+    }
+
+    &.lock {
+        overflow: hidden;
     }
 }
 

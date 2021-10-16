@@ -16,7 +16,7 @@
     }
 
     &__swiper {
-        min-height: 230px;
+        min-height: 250px;
         position: relative;
 
         @media (min-width: $screen--m) {
@@ -29,7 +29,7 @@
             top: 0px;
             right: -1px;
             width: 24px;
-            height: 202px;
+            height: 210px;
             background: linear-gradient(270deg, $bg-color 16.84%, transparent 100%);
             z-index: 2;
         }
@@ -40,16 +40,19 @@
     }
 
     &__card {
-        display: block;
-        min-width: 260px;
-        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex-shrink: 0;
+        min-width: 200px;
+        max-height: 200px;
         border: 1px solid $border-button-color;
         border-radius: 6px;
         background-color: $bg-elem-color;
         cursor: pointer;
         position: relative;
-        transition: 150ms;
-
+        transition: 500ms;
 
         &:active {
             border: 3px solid $active-link-color;
@@ -96,6 +99,8 @@
         border: none;
         text-align: left;
 
+        transition: 500ms;
+
 
         @media (min-width: $screen--m) {
             width: 320px;
@@ -109,7 +114,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 6px 5px $block-border-color;
+            box-shadow: 0 0 6px 5px $modal-color;
             border-radius: 6px;
             background-color: $bg-elem-color;
         }
