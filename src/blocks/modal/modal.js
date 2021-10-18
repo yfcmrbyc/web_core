@@ -18,6 +18,7 @@ if (buttonsOpenCall.length > 0) {
             const modalName = openCall.getAttribute('name');
             const curentModal = document.getElementById(modalName);
             modalOpen(curentModal);
+            const focusModal = document.querySelector('.modal-call');
         });
     }
 }
@@ -35,6 +36,7 @@ if (buttonsOpenFeedback.length > 0) {
 }
 
 let unlock = true;
+let lastFocuse;
 
 const timeout = 800;
 
@@ -73,6 +75,13 @@ function modalOpen(curentModal) {
                 modalClose(e.target.closest('.modal'));
             }
         });
+        overlay.addEventListener('click', function (e) {
+            modalClose(curentModal);
+        });
+        lastFocuse = document.activeElement;
+        curentModal.focus();
+        curentModal.setAttribute('tabindex', '1');
+        
     }
 
 }
@@ -84,6 +93,9 @@ function modalClose (modalActive, doUnlock = true) {
         if (doUnlock) {
             bodyUnlock();
         }
+
+        lastFocuse.focus();
+        modalActive.setAttribute('tabindex', '0');
     }
 }
 
