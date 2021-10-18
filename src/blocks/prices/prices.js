@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       if (breakpointSwiperPrices.matches) {
 
-        if ( pricesSwiper !== undefined ) {
+        if ( pricesSwiper) {
           pricesSwiper.destroy( true, true );
         }
       } else {

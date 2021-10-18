@@ -10,7 +10,7 @@
         @include button-text;
         transition: 150ms;
 
-        &.active {
+        &--active {
             color: $text-header-color;
         }
 

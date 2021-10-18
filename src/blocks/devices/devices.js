@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         hideCardDevices(deviceCard, 3);
 
-        if ( devicesSwiper !== undefined ) {
+        if ( devicesSwiper) {
           devicesSwiper.destroy( true, true );
         }
 

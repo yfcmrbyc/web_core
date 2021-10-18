@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         hideCardBrands(brandCard, 6);
 
-        if ( brandsSwiper !== undefined ) {
+        if ( brandsSwiper) {
           brandsSwiper.destroy( true, true );
         }
 

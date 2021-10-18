@@ -22,7 +22,7 @@
         color: $text-header-color;
         transition: 150ms;
 
-        &.active{
+        &--active{
             border: 1px solid $active-link-color;
             border-radius: 5px;
             background-color: $bg-elem-color;
